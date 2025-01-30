@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3lvis</title>
+    <link rel="stylesheet"href="index.css">
+    <script src="script.jss"defer></script>
+    <header>
+        
+        <h1>3lvis</h1>
+        <nav>
+            <ul class="header">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#prints">Prints</a></li>
+                <li><a href="#originals">Originals</a></li>
+                <li><a href="shopping.html" id="cart-icon">🛒</a></li>
+                </ul>
+        </nav>
+        <div class="header-right">
+            <a href="#" class="cart-icon" >
+            </a>
+            <a href="contact.html" class="contact-button">Contact Us</a>
+    </header>
+   
+</head>
+<body>   
+    <section id="Art">
+        <h2>Dry Art</h2>
+        <div class="video-container">
+        <video autoplay loop muted playsinline>
+            <source src="43444-360.mp4" type="video/mp4">
+        </video>
+        <div class="video.text">
+        <p class="video-text">Welcome to the Art Gallery of 3lvis Rambo.Explore intricate pencil
+            drawings that reflect a unique artristic vision. </p>
+        </div>
+        </div>
+ </section>
+ <section id = "Gallery">
+    <h2>Gallery</h2>
+    <div class = "gallery-container">
+
+        <a href="pic1.jpg" class="gallery-item large" data-lightbox="Gallery">
+        <div class="gallery-item large">
+        <img src = "pic1.jpg" alt = "Artwork 1">
+        <p class="image-description">"Art Of Fishing" - The only way a man gets to relax his brain and his heart is through Fishing.</p>
+        </a>
+    </div>
+
+        <div class="gallery-item large">
+            <a href="pic2.jpg" class="gallery-item large" data-lightbox="Gallery">
+        <img src="pic2.jpg" alt = "Artwork 2">
+        <p class="image-description">"Power" - Strength and Power cannot be based on age or size,The greatest tool is our minds.</p>
+        </a>
+    </div>
+
+        <div class="gallery-item large">
+            <a href="pic3.jpg" class="gallery-item large" data-lightbox="Gallery">
+        <img src="pic3.jpg" alt = "Artwork 3">
+        <p class="image-description">"Beauty" - A woman's true Beauty is her hair.</p>
+        </a>
+        </div>
+
+        <div class="gallery-item large">
+            <a href="pic4.jpg" class="gallery-item large" data-lightbox="Gallery">
+        <img src="pic4.jpg" alt = "Artwork 4">
+        <p class="image-description">"Struggle" - The scuffle to beat suffering is real. </p>
+        </a>
+        </div>
+
+        <div class="gallery-item large">
+            <a href="pic5.jpg" class="gallery-item large" data-lightbox="Gallery">
+        <img src="pic5.jpg" alt = "Artwork 5">
+        <p class="image-description">"Whose the King?" - Stay in your Lane.</p>
+        </a>
+        </div>
+
+    <div class="gallery-item large">
+            <a href="pic6.jpg" class="gallery-item large" data-lightbox="Gallery">
+        <img src="pic6.jpg" alt = "Artwork 6">
+        <p class="image-description">"I Can't Breathe" - From time to time , We need to let go of our emotions and let them flow with the river.</p>
+    </a>
+    </div>
+ </section>
+ <script>
+
+document.addEventListener("DOMContentLoaded", function() {
+    const galleryItems = document.querySelectorAll("[data-lightbox='gallery']");
+    
+    galleryItems.forEach(item => {
+        item.addEventListener("click", function(event) {
+            event.preventDefault();
+            openLightbox(this.href);
+        });
+    });
+
+    function openLightbox(imgSrc) {
+        let lightbox = document.createElement("div");
+        lightbox.id = "lightbox";
+        lightbox.innerHTML = `<div class="lightbox-content">
+                                <span class="close-btn">&times;</span>
+                                <img src="${imgSrc}" alt="Artwork">
+                              </div>`;
+        document.body.appendChild(lightbox);
+
+        document.querySelector(".close-btn").addEventListener("click", function() {
+            document.body.removeChild(lightbox);
+        });
+    }
+});
+
+ </script>
+
+        <footer>
+            <p>&copy;2025 3lvis.All rights reserved.</p>
+        </footer>
+        <script>
+            document.getElementById("contact-form").addEventListener('submit',function(e)
+            {
+                e.preventDefault();
+                alert("Thank you for reaching out!We will get back to you soon.");
+            });
+        </script>
+        <script src="scripts/script.jss"></script>
+    
+</body>
+</html>
